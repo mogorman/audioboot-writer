@@ -3,3 +3,6 @@ http://www.hobby-roboter.de/forum/viewtopic.php?f=4&t=128&p=531
 http://www.hobby-roboter.de/forum/viewtopic.php?f=4&t=127
 
 this is where the orignial souce came from that i forked from
+
+to use 
+java -jar bin/audiboot.jar program.hex output.wav
