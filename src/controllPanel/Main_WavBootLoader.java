@@ -98,9 +98,11 @@ public class Main_WavBootLoader extends JPanel{
 	class inputHexFile_ButtonListener implements ActionListener{
 		public boolean Knopf1=false;
 		public void actionPerformed(ActionEvent e) {
-			System.out.println(e.getActionCommand());
+			//MOG at some point it would be nice to implement a noisy mode for this 
+			//System.out.println(e.getActionCommand());
 
-        	System.out.println("File Button pressed");
+ 	//MOG at some point it would be nice to implement a noisy mode for this 
+       	//System.out.println("File Button pressed");
         	// get current file path
         	File ff=new File(".");
         	try {
@@ -138,7 +140,8 @@ public class Main_WavBootLoader extends JPanel{
 	class writeWav_ButtonListener implements ActionListener{
 		public boolean Knopf1=false;
 		public void actionPerformed(ActionEvent e) {
-			System.out.println(e.getActionCommand());
+		//MOG at some point it would be nice to implement a noisy mode for this 
+			//System.out.println(e.getActionCommand());
 			testText.append("\nconverting hex to wav\n");
 			try {
 				WavCodeGenerator.convertHex2Wav(setupData.getInputHexFile() ,setupData.getOutputWavFile());
@@ -158,8 +161,8 @@ public class Main_WavBootLoader extends JPanel{
 	public static void main(String[] args) {
 
 		Main_WavBootLoader w=new Main_WavBootLoader();
-		
-		System.out.println("Ende");
+				//MOG at some point it would be nice to implement a noisy mode for this 
+		//System.out.println("Ende");
 
 	}
 

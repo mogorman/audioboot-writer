@@ -154,13 +154,24 @@ public class WavCodeGenerator {
 		IntelHexFormat.anzeigen(erg);
 		WavCodeGenerator w=new WavCodeGenerator();
 		double[] signal=w.generateSignal(IntelHexFormat.toUnsignedIntArray(IntelHexFormat.discardHeaderBytes(erg)));
-		w.saveWav(signal,new File("test.wav"));
+		w.saveWav(signal,wavFile);
 		return true;
 	}
 	public static void main(String[] args) throws Exception
 	{
-   	    File f1 = new File("C:\\Dokumente und Einstellungen\\chris\\Eigene Dateien\\Entwicklung\\java\\EclipseWorkspace2\\wavBootLoader\\test.hex");
-   	    File f2 = new File("C:\\Dokumente und Einstellungen\\chris\\Eigene Dateien\\Entwicklung\\java\\EclipseWorkspace2\\wavBootLoader\\test.wav");
-   	    convertHex2Wav(f1,f2);
+	    if (args.length != 2) {
+		System.out.println("Error: This program must have 2 arguments.");
+		System.out.println("java -jar audiboot.jar program.hex output.wav");
+		System.exit(1);
+	    }
+   	    File f1 = new File(args[0]);
+	    if(f1.exists() && !f1.isDirectory()) {
+		File f2 = new File(args[1]);
+		convertHex2Wav(f1,f2);
+		System.exit(0);
+	    }
+	    System.out.println("Error: You did not provided a valid hex file.");
+	    System.out.println("java -jar audiboot.jar program.hex output.wav");
+	    System.exit(1);
 	}
 }

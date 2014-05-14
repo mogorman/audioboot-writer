@@ -50,7 +50,7 @@ import java.math.BigInteger;
 public class IntelHexFormat
 {
     /** enable debugMode */
-    private final static boolean debugMode = true;
+    private final static boolean debugMode = false;
 
     /** default maximum length of a block */
     private final static int maxblocklen = Integer.MAX_VALUE;
